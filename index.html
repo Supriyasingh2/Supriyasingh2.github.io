@@ -11,7 +11,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav id="nav-menu">
         <div class="containernav">
             <div class="logo"><a href="#home">Supriya's Portfolio</a></div>
             <div class="nav-links">
@@ -23,6 +23,11 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="Supriya Singh Gaur-fw28_334-Node JS Developer.pdf" target="_blank" download="Supriya Singh Gaur-fw28_334-Node JS Developer.pdf">Resume</a></li>
             </ul>
+            </div>
+            <div class="hamburger" onclick="toggleNavbar()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </div>
     </nav>
@@ -195,6 +200,8 @@
             <!-- Add GitHub Stats and Calendar components -->
             <div class="github-stats"></div>
             <div class="github-calendar"></div>
+            <div class="github-contribution-graph">
+            </div>
         </div>
     </section>
 
@@ -251,7 +258,44 @@
     </section>
 <!--footer-->
 <div class="footer">M A D E &nbsp; W I T H &nbsp; ❤️ &nbsp; B Y &nbsp; S U P R I Y A</div>
-    <script src="scripts.js"></script>
+    <script>
+        function toggleNavbar() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+
+    async function fetchGitHubStats(username) {
+        try {
+            const response = await fetch(`https://api.github.com/users/${username}`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error fetching GitHub statistics', error);
+            return null;
+        }
+    }
+
+    // Function to update the GitHub statistics section
+    async function updateGitHubStats(username) {
+        const githubStats = document.querySelector('.github-stats');
+
+        // Fetch GitHub statistics
+        const stats = await fetchGitHubStats(username);
+
+        // Display GitHub statistics
+        if (stats) {
+            githubStats.innerHTML = `
+                <h2>GitHub Statistics</h2>
+                <p>Total Repositories: ${stats.public_repos}</p>
+                <p>Followers: ${stats.followers}</p>
+                <p>Following: ${stats.following}</p>
+            `;
+        }
+    }
+    
+    // Call the function with your GitHub username
+    updateGitHubStats('Supriyasingh2');
+    </script>
 </body>
 
 </html>
