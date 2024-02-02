@@ -123,6 +123,7 @@ body, h1, h2, h3, p, ul, li {
         margin: 20px;
         color:teal;
         text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .icon:hover{
         transform: scale(1.05);
@@ -331,7 +332,27 @@ p {
     .github-section {
         padding: 50px 0;
     }
-    
+    .gitcontainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center images */
+    }
+    @media screen and (min-width: 768px) {
+        .gitcontainer > div {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
     /* Contact Section styles */
     .contact-section {
         padding: 30px 0;
