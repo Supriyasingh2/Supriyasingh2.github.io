@@ -21,7 +21,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="Supriya Node resume.pdf" target="_blank" download="Supriya Node resume.pdf">Resume</a></li>
+                <li><a href="#" onclick="downloadResumeAndOpenDrive();">Resume</a></li>
             </ul>
             </div>
             <div class="hamburger" onclick="toggleNavbar()">
@@ -272,6 +272,18 @@
 <!--footer-->
 <div class="footer">M A D E &nbsp; W I T H &nbsp; ❤️ &nbsp; B Y &nbsp; S U P R I Y A</div>
     <script>
+        function downloadResumeAndOpenDrive() {
+    // Download the PDF file
+    var pdfLink = document.createElement('a');
+    pdfLink.href = 'Supriya Node resume.pdf';
+    pdfLink.download = 'Supriya Node resume.pdf';
+    pdfLink.click();
+
+    // Open the Google Drive link in a new tab
+    window.open('https://drive.google.com/file/d/1SmzbJRGtW2sHRmrSJ1DPHv1iNU4LOPsG/view?usp=sharing', '_blank');
+}
+
+
         function toggleNavbar() {
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.toggle('show');
