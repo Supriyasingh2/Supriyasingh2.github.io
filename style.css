@@ -76,25 +76,29 @@ body, h1, h2, h3, p, ul, li {
         .nav-links {
             display: none;
             flex-direction: column;
-            text-align: center;
+           
             position: absolute;
-            top: 70px;
+            top: 60px;
             left: 0;
             width: 100%;
             background-color: rgb(1, 44, 44);
-            z-index: 1000;
+            z-index: 1;
         }
     
         .nav-links.show {
             display: flex;
         }
-    
+        .nav-links ul {
+            flex-direction: column;
+            align-items: center;
+        }
         .nav-links li {
             margin: 10px 0;
         }
     
         .hamburger {
-            display: flex;
+            display: block;
+            cursor: pointer;
         }
     }
     /* Home Section styles */
@@ -278,7 +282,7 @@ p {
         width: 50%; /* Adjust the width as needed */
         height: auto;
         padding:20px;
-       border-radius: 30px;
+       border-radius: 10px;
        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .symbol{
