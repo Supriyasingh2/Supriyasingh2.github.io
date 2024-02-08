@@ -224,24 +224,9 @@
             <h2>Contact Me</h2>
 
             <div class="contact-card">
-                <!-- Contact Information Card -->
-                <div class="content">
-                    <div class="info">
-                        <i class="fas fa-envelope"></i>
-                        <p>supriyasinghgaur8@gmail.com</p>
-                    </div>
-                    <div class="info">
-                        <i class="fas fa-phone"></i>
-                        <p>+91 8303599784</p>
-                    </div>
-                    <div class="info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Kanpur, India</p>
-                    </div>
-                </div>
-
                 <!-- Contact Form Card -->
                 <div class="form">
+                    <h3 style="text-align: center; font-size: 25px; color:teal;">Message me</h3>
                     <form action="https://getform.io/f/21a02dee-c80b-4741-8faa-2462f089bf6a" method="POST">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -258,20 +243,39 @@
                         <button type="submit">Submit</button>
                     </form>
                 </div>
-                
-            </div>
-
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="mailto:supriyasinghgaur8@gmail.com" target="_blank" class="icon"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/Supriyasingh2" target="_blank" class="icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/supriyasinghgaur/" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+                <!-- Contact Information Card -->
+                <div class="content">
+                   
+                    <div class="info">
+                        <i class="fas fa-envelope"></i>
+                        <p>supriyasinghgaur8@gmail.com</p>
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 8303599784</p>
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Kanpur, India</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="mailto:supriyasinghgaur8@gmail.com" target="_blank" class="icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Supriyasingh2" target="_blank" class="icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/supriyasinghgaur/" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 <!--footer-->
 <div class="footer">M A D E &nbsp; W I T H &nbsp; ❤️ &nbsp; B Y &nbsp; S U P R I Y A</div>
     <script>
+function toggleNavbar() {
+    var navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+
         function downloadResumeAndOpenDrive() {
     // Download the PDF file
     var pdfLink = document.createElement('a');

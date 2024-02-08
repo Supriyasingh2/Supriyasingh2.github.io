@@ -47,6 +47,7 @@ body, h1, h2, h3, p, ul, li {
     .nav-links {
         list-style: none;
         margin-left:40%;
+        text-align: center;
     }
     
     .nav-links li {
@@ -127,7 +128,6 @@ body, h1, h2, h3, p, ul, li {
         margin: 20px;
         color:teal;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .icon:hover{
         transform: scale(1.05);
@@ -258,8 +258,10 @@ p {
 @media only screen and (max-width: 768px) {
     .skills,
     .tools {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -386,54 +388,55 @@ p {
         align-items: center;
         background-color: whitesmoke;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+        border-radius: 8px;
         overflow: hidden;
-        width:100%;
+        justify-content: space-between;
+        width:80%;
         flex-wrap: wrap;
         margin: 30px;
     }
     
     .content {
-        flex: 1;
         padding: 20px;
     }
     
     .info {
-        display: flex;
+        
         align-items: center;
         margin-bottom: 15px;
         padding: 15px;
         border-radius: 10px;
-        background-color: rgba(1, 44, 44, 0.54);;
     }
     .info:hover{
         transform: scale(1.1);
     }
     .info i {
         font-size: 24px;
-        color: rgb(1, 44, 44);;
+        color: rgb(1, 107, 107);
         margin-right: 10px;
     }
     
     .info p {
-        color: #333;
+        color:teal;
     }
     
     .form {
         flex: 1;
         padding: 20px;
         margin: 20px;
+        
     }
     
     form {
         display: flex;
         flex-direction: column;
+        
     }
     
     label {
         font-weight: bold;
         margin-bottom: 8px;
-        color: #333;
+        color:teal;
     }
     
     input,
@@ -442,7 +445,7 @@ p {
         margin-bottom: 15px;
         border: 1px solid #ddd;
         border-radius: 5px;
-        width: 100%;
+        
     }
     
     button {
