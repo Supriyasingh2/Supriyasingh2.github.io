@@ -32,7 +32,7 @@
         </div>
     </nav>
 
-   
+
     <!-- Home/About Me Section -->
     <section id="home" class="home-section">
         <div class="container">
@@ -197,11 +197,10 @@
     <!-- GitHub Statistics & Calendar Section -->
     <section class="github-section">
         <h2>Git Statics</h2>
-        <div>
-            <p><img class="graph" src="https://ghchart.rshah.org/supriyasingh2" alt="supriyasingh2's GitHub chart" title="supriyasingh2's GitHub chart"></p>
+        <div class="graph">
+            <p><img  src="https://ghchart.rshah.org/supriyasingh2" alt="supriyasingh2's GitHub chart" title="supriyasingh2's GitHub chart"></p>
         </div>
         <div class="gitcontainer">
-            
             <!-- GitHub Stats -->
             <div>
                 <p>&nbsp;<img src="https://github-readme-stats.vercel.app/api?username=supriyasingh2&show_icons=true&locale=en" alt="supriyasingh2" /></p>
@@ -269,7 +268,12 @@ function toggleNavbar() {
     var navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
-
+document.querySelectorAll('.nav-links a').forEach(item => {
+    item.addEventListener('click', () => {
+        var navLinks = document.querySelector('.nav-links');
+        navLinks.classList.remove('show');
+    });
+});
 
         function downloadResumeAndOpenDrive() {
     // Download the PDF file

@@ -24,6 +24,7 @@ body, h1, h2, h3, p, ul, li {
         padding: 20px;
         display: flex;
        justify-content: space-between;
+       align-items: center;
     }
     #nav-menu {
         background-color: rgb(1, 44, 44);
@@ -77,8 +78,7 @@ body, h1, h2, h3, p, ul, li {
         .nav-links {
             display: none;
             flex-direction: column;
-           
-            position: absolute;
+            position:sticky;
             top: 60px;
             left: 0;
             width: 100%;
@@ -89,16 +89,19 @@ body, h1, h2, h3, p, ul, li {
         .nav-links.show {
             display: flex;
         }
+    
         .nav-links ul {
             flex-direction: column;
             align-items: center;
+            padding: 0;
         }
+    
         .nav-links li {
             margin: 10px 0;
         }
     
         .hamburger {
-            display: block;
+            display:block;
             cursor: pointer;
         }
     }
@@ -284,8 +287,11 @@ p {
         width: 50%; /* Adjust the width as needed */
         height: auto;
         padding:20px;
-       border-radius: 10px;
+        background-color: rgba(203, 201, 201, 0.421);
        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .project-card img:hover {
+        transform: scale(1.1);
     }
     .symbol{
         font-size:40px;
@@ -336,33 +342,34 @@ p {
     }
     /* GitHub Section styles */
     .github-section {
-        padding: 50px 0;
+        padding: 25px 0;
     }
     .gitcontainer{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 40px;
+        margin-top: 20px;
         padding: 2%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.288);
+        
     }
     img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto;
+        margin: 10px auto;
         
     }
     .graph{
-        width: 75%;
+       padding-left:10%;
+       padding-right: 10%;
+       padding:2%;
         align-items: center;
-        display: block;
-        justify-content: space-between;
-        margin: 0 auto;
-        border-radius: 10px;
-        padding: 2%;
+       
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.288);
     }
     @media screen and (min-width: 768px) {
@@ -468,7 +475,7 @@ p {
     }
     
     .icon {
-        font-size: 24px;
+        font-size: 20px;
         color: rgb(1, 44, 44);
         margin: 0 10px;
         text-decoration: none;
@@ -524,20 +531,6 @@ p {
    
     /* Responsive styles */
     @media only screen and (max-width: 768px) {
-        .containernav {
-            flex-direction: column; /* Stack logo and nav-links vertically */
-        }
-    
-        .nav-links {
-            text-align: center; /* Center the links when stacked */
-            margin-top: 20px;
-        }
-    
-        .nav-links li {
-            display: block;
-            margin: 10px 0;
-        }
-    
         .home-section img {
             width: 150px; /* Adjust the width for smaller screens */
             height: 150px; /* Adjust the height for smaller screens */
