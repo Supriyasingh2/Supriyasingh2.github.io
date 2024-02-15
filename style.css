@@ -392,31 +392,34 @@ p {
     .project-card img:hover {
         transform: scale(1.1);
     }
-    .symbol{
-        font-size:40px;
-        margin: 40px;
-        color:rgb(1, 44, 44);;
-        text-align: center;
-    }
-    .symbol i{
-        margin-right: 15px;
-    }
     .project-info {
         flex: 1;
-        padding-top: 80px;
+        padding-top: 50px;
         padding-left: 20px;
         padding-right: 20px;
+        margin:20px;
         line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .project-card h2,
     .project-card p {
         margin-bottom: 10px;
     }
-
+    .symbol{
+        font-size:40px;
+        margin: 40px auto;
+        color:rgb(1, 44, 44);;
+        text-align: center;
+    }
+    .symbol i{
+        margin-right: 15px;
+    }
     .buttons {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .buttons a {
@@ -431,12 +434,16 @@ p {
     .buttons a:hover {
         transform: scale(1.1);
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 1024px) {
         .project-card {
-            padding: 10px; /* Adjust padding for smaller screens */
+            flex-direction: column; 
+            align-items: center;
         }
         .project-card img{
             width:90%
+        }
+        .project-info{
+            padding:20px 10px;
         }
     }
     /* GitHub Section styles */
